@@ -1,7 +1,9 @@
 import React from 'react'
 import {useState, useEffect} from 'react'
 import "../Meme.css"
+import { Form, Button } from 'react-bootstrap';
 
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 
 
@@ -87,20 +89,26 @@ useEffect(() => {
 
   return (
     <>
-    <h1>Meme</h1>
+    <p className="title">Meme Generator</p>
     
-    <div className="memeContainer" style={{backgroundImage: `url(${pic})`}}>
+    {/* <div className="memeContainer" style={{backgroundImage: `url(${pic})`}}> */}
+    <div className="memeContainer">
     <p className="up">{submittedUpper}</p>
+    <img className="picture" src={pic}/>
     <p className="bottom">{submittedBottom}</p>
-
     </div>
 
     <br/>
-    <button onClick={handleClick}>Change</button>
+    <div className="change">
+        <Button className="changer" variant="dark" type="submit" onClick={handleClick}>Change</Button>
+</div>
+   
 
 
 
-    <form onSubmit={upperHandler}>
+
+
+{/* <form onSubmit={upperHandler}>
         <label>
         Add upper text:
        
@@ -123,9 +131,38 @@ useEffect(() => {
       />
       </label>
       <button type="submit" > Submit </button> <span></span> 
-        </form>
+        </form> */}
+<div>
+<Form className="formcontainer" onSubmit={upperHandler}>
+      <Form.Group className="mb-3">
+        
+        <Form.Control type="text" placeholder="Upper text..." value={upper}
+        onChange={upperChangeHandler}/>
+         <Button variant="light" type="submit" onSubmit={upperHandler}>
+        ADD
+      </Button>
+      </Form.Group>
+     
+    </Form>
 
-    
+            
+<Form className="formcontainer" onSubmit={bottomHandler}>
+      <Form.Group className="mb-3">
+       
+        <Form.Control type="text" placeholder="Bottom text..." value={bottom}
+        onChange={bottomChangeHandler}/>
+        <Button variant="light" type="submit" onSubmit={bottomHandler}>
+        ADD
+      </Button>
+      </Form.Group>
+
+     
+      
+    </Form>
+
+</div>
+        
+
     </>
   )
 }

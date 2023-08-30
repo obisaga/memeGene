@@ -1,28 +1,83 @@
 
 @import url('https://fonts.googleapis.com/css?family=Impact&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Tourney&display=swap');
+
+.title {
+    color: #31d4f9;
+    font-family: 'Tourney';
+    font-size: 90px;
+    font-weight: 900;
+    text-shadow: 5px 5px #e348fb;
+}
+Button.changer {
+background: rgb(49,212,249);
+background: radial-gradient(circle, rgba(49,212,249,0.9220938375350141) 28%, rgba(227,72,251,1) 100%);
+border:none;
+font-size: 2rem;
+height: 80px;
+width: 200px;
+}
 
 .memeContainer {
     display: flex;
     flex-direction: column;
-height: 60rem;
-width: 60rem;
-    text-align: center;
-    background-size: 70% auto;
+    justify-content: center;
+    align-content: center;
+    height: 50rem;
+    width: max-content;
+    border: 1px solid black;
+position: relative;
 
+/* background-size: 90% auto;
     background-repeat: no-repeat;
+    background-position: center; */
+}
+.picture {
+    
 
+    height: inherit;
+
+}
+.picture img {
+    position: absolute;
+
+    width: inherit;
+    height: inherit;
 }
 
 p {
-    color: white;
+    color: red;
     text-transform: uppercase;
     font-family: 'Impact', sans-serif;
     font-size: 2.5rem;
 
 }
 
-
-.bottom {
-    
+.up {
+    position: absolute;
+    top: 1px;
+    left: 50%;
+    transform: translate(-50%, -1px);
 }
 
+.bottom {
+    position: absolute;
+    bottom: 1px;
+    left: 50%;
+    transform: translate(-50%, -1px);
+}
+
+.formcontainer {
+    display: flex;
+   flex-direction: column;
+   justify-content: center;
+   padding-top: 20px;
+ 
+}
+.mb-3 {
+   display: flex;
+   flex-direction: row;
+   justify-self: center;
+   align-self: center;
+    width: 90%;
+}
