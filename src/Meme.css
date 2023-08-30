@@ -2,6 +2,8 @@
 @import url('https://fonts.googleapis.com/css?family=Impact&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Tourney&display=swap');
 
+
+
 .title {
     color: #31d4f9;
     font-family: 'Tourney';
@@ -9,14 +11,7 @@
     font-weight: 900;
     text-shadow: 5px 5px #e348fb;
 }
-Button.changer {
-background: rgb(49,212,249);
-background: radial-gradient(circle, rgba(49,212,249,0.9220938375350141) 28%, rgba(227,72,251,1) 100%);
-border:none;
-font-size: 2rem;
-height: 80px;
-width: 200px;
-}
+
 
 .memeContainer {
     display: flex;
@@ -24,7 +19,7 @@ width: 200px;
     justify-content: center;
     align-content: center;
     height: 50rem;
-    width: max-content;
+    width: inherit;
     border: 1px solid black;
 position: relative;
 
@@ -44,6 +39,15 @@ position: relative;
     width: inherit;
     height: inherit;
 }
+
+Button.changer {
+    background: rgb(49,212,249);
+    background: radial-gradient(circle, rgba(49,212,249,0.9220938375350141) 28%, rgba(227,72,251,1) 100%);
+    border:none;
+    font-size: 2rem;
+    height: 80px;
+    width: 200px;
+    }
 
 p {
     color: red;

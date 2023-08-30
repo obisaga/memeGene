@@ -15,8 +15,12 @@
 }
 
 body {
-  height: 100%;
-  background-color:dimgrey;
+ 
+  /* background-color:dimgrey; */
+  background-color: #717171;
+opacity: 1;
+background-image: radial-gradient(circle at center center, #b1b1b1, #717171), repeating-radial-gradient(circle at center center, #b1b1b1, #b1b1b1, 23px, transparent 46px, transparent 23px);
+background-blend-mode: multiply;
 }
 
 a {
